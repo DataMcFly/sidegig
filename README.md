@@ -5,6 +5,7 @@ SideGig is an online and mobile marketplace that allows users to outsource small
 
 Users name the task they need done, name the price they are willing to pay, and a network of pre-approved contractors bid to complete the job.
 
+Built with the FIT stack, client-side only.
 
 - Task 1: Posting & Browsing Task
   - Working with Views & Controllers
