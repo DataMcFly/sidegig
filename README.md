@@ -9,6 +9,8 @@ Built with the FIT stack, client-side only.
 
 <p style="border: 1px solid #ccc">
 
+![Clone TaskRabbit with Angular.js and Flybase](/sidegig.png?raw=true "Clone TaskRabbit with Angular.js and Flybase")
+
 </p>
 
 With SideGig, you will be learning how to use AngularJS & Flybase to build a Real-time web app.  More importantly, we're build a Real platform which is a clone of TaskRabbit.
