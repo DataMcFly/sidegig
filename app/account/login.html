@@ -1,0 +1,43 @@
+<div class="auth-forms title">
+	<h2>Login</h2>
+	<form>
+		<div class="input-group">
+			<div class="input-group-addon">
+				<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+			</div>
+			<input type="email" ng-model="email" placeholder="Email" class="form-control" required>
+		</div><br>
+		
+		<div class="input-group">
+			<div class="input-group-addon">
+				<span class="glyphicon glyphicon-lock" aria-hidden="true"></span>
+			</div>
+			<input type="password" ng-model="pass" placeholder="Password" class="form-control" required>
+		</div><br> 
+		<button ng-click="login()" class="btn btn-info">Log In</button>
+	</form>
+</div>
+<!--
+<h2 ng-show ng-hide="createMode">Login</h2>
+<h2 ng-cloak ng-show="createMode">Register</h2>
+<form>
+	<label>
+		<span>email</span>
+		<input type="text" ng-model="email" />
+	</label>
+	<label>
+		<span>password</span>
+		<input type="password" ng-model="pass" />
+	</label>
+	<label ng-cloak ng-show="createMode">
+		<span>confirm pass</span>
+		<input type="password" ng-model="confirm" />
+	</label>
+	<button ng-click="login(email, pass)" ng-hide="createMode">Log In</button>
+	<button ng-click="createMode = true" ng-hide="createMode">Register</button>
+	<button ng-cloak ng-show="createMode" ng-click="createAccount()">Create Account</button>
+	<button ng-cloak ng-show="createMode" ng-click="createMode = false">Cancel</button>
+
+	<p ng-show="err" class="error">{{err}}</p>
+</form>
+-->
