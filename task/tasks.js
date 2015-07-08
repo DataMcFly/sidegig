@@ -257,7 +257,7 @@ angular.module('TaskCtrl', ['ngRoute', 'flybaseResourceHttp', 'loginMcFly'])
 	$scope.cancelTask = function( taskId ){
 		Task.query({"_id":taskId},{"limit":1}).then(function( task ){
 			task = task[0];
-			task.$remove(function() {
+			task.$remove().then(function(returnData) {
 				$location.path('/browse/');
 			}, function() {
 				$location.path('/browse/');
