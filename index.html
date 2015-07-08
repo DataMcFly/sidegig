@@ -1,0 +1,82 @@
+<!doctype html>
+<!--  
+
+    88888888o.                 .                                                                 
+    888    888               .o8                                              .ooooooo.   oooo   oooo  oooo
+    888    888   888888o.  .o888oo    888880.  ooo. .oo.  .oo.    .o88888o.   888         `888   `888  888'
+    888    888        888    888          888  `888P"Y88bP"Y88b   888         888oooo      888    `888888'
+    888    888  .o8888888    888    .o8888888   888   888   888   888         888          888      `888'
+    888    888  888   888    888 .  888   888   888   888   888   888         888          888       88'   .o.
+    888888888'  `Y8bod8P'    "888"  `Y8bod8P'  o888o o888o o888o  `Y8bod8P'  o888o        o888o     88'    Y8P     
+
+                                                                                                                -->
+<html lang="en" ng-app="SideGigApp">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>SideGig.me</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<base ng-href="/">
+	
+	<!-- CSS -->
+	<link ng-href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+	<link ng-href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="bower_components/toaster/toaster.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.2.1/css/material.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.2.1/css/ripples.css" />
+
+	<link rel="stylesheet" ng-href="css/main.css"> <!-- custom styles -->
+
+	<!-- JS -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+	<script src="bower_components/toaster/toaster.min.js"></script>
+	<script src="bower_components/angular-route/angular-route.js"></script>
+	<script src="bower_components/md5/src/md5.js"></script>    
+	<script src="bower_components/moment/min/moment.min.js"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-moment/0.9.0/angular-moment.js"></script>
+
+	<script src="components/forge.min.js"></script>
+</head>
+<body ng-cloak>
+	<div class="container">
+		<div ng-include="'templates/nav.html'"></div>		
+		<toaster-container toaster-options="{'time-out': 3000, 'close-button':true}"></toaster-container>
+		<div class="jumbotron">
+			<div ng-view=""></div>    
+		</div>
+	</div>
+	<footer class="footer">
+		<div class="container">
+			<p class="text-muted">Fit Stack v<span app-version></span></p>
+		</div>
+	</footer>
+	<!-- JS -->
+	<script src="bower_components/flybase/flybase.js"></script>
+	<script src="bower_components/angularfly/angularfly.js"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.2.1/js/material.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.2.1/js/ripples.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $.material.init();
+        });
+    </script>
+		
+	<!-- ANGULAR STUFF -->
+	<script src="config.js"></script>
+<!-- SERVICES -->
+	<script src="components/directives.js"></script>
+	<script src="components/models.js"></script>
+	<script src="components/loginMcFly.js"></script>
+	<script src="components/controllers.js"></script>
+<!-- CONTROLLERS -->
+	<script src="task/tasks.js"></script>
+	<script src="account/account.js"></script>
+	<script src="home/home.js"></script>
+	<script src="app.js"></script>
+</body>
+</html>
