@@ -22,10 +22,9 @@ angular.module('TaskCtrl', ['ngRoute', 'flybaseResourceHttp', 'loginMcFly'])
 	$scope.searchTask = '';		
 	$scope.selectedTask = {};
 	$scope.tasks = tasks;//Task.all({ sort: {status: 1} });
-	
-	var loggedIn = false;
+	$scope.loggedIn = false;
 	if( login.isLoggedIn() ){
-		loggedIn = true;
+		$scope.loggedIn = true;
 	}
 
 	$scope.me = me;
