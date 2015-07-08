@@ -258,9 +258,9 @@ angular.module('TaskCtrl', ['ngRoute', 'flybaseResourceHttp', 'loginMcFly'])
 		Task.query({"_id":taskId},{"limit":1}).then(function( task ){
 			task = task[0];
 			task.$remove().then(function(returnData) {
-				$location.path('/browse/');
+				$location.path('/browse');
 			}, function() {
-				$location.path('/browse/');
+				$location.path('/browse');
 			});
 		});
 	};
