@@ -70,7 +70,7 @@
 							<button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#offModal">Make an Offer</button>
 						</div>
 						<div ng-show="!signedIn">
-							<button class="btn btn-danger btn-sm" disabled="true" alt="Sorry, only logged in users can make an offer">Make an Offer</button>
+							<button class="btn btn-danger btn-sm" disabled="true" ng-click="sorry()">Make an Offer</button>
 						</div>
 				
 						<div ng-show="isAssignee(selectedTask) && !isCompleted(selectedTask)">

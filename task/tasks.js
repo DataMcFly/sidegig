@@ -53,6 +53,10 @@ angular.module('TaskCtrl', ['ngRoute', 'flybaseResourceHttp', 'loginMcFly'])
 	}
 */
 
+	$scope.sorry = function(){
+		toaster.pop('error', "Sorry, only logged in users can make an offer.");
+	}
+
 	function setSelectedTask(task) {
 		$scope.selectedTask = task;
 		
