@@ -2,7 +2,7 @@
 We usually place controllers in their own associated folders, but sometimes we have controllers that have no set route, meaning they are used throughout the site so we place them here instead.
 */
 angular.module('OtherCtrl', ['ngRoute'])
-.controller('NavController', function($scope, $location, $route, toaster, User, Login) {
+.controller('NavController', function($scope, $location, $route, $timeout, toaster, User, Login) {
 	$scope.currentUser = {};
 	$scope.token = null;
 
