@@ -70,7 +70,7 @@
 							<button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#offModal">Make an Offer</button>
 						</div>
 						<div ng-show="!signedIn">
-							<button class="btn btn-danger btn-sm">Must be logged in</button>
+							<button class="btn btn-danger btn-sm" disabled="true">Make an Offer</button>
 						</div>
 				
 						<div ng-show="isAssignee(selectedTask) && !isCompleted(selectedTask)">
@@ -162,9 +162,9 @@
 										</span>
 									</form>
 							</div>
-							<div class="row" ng-show="isOpen(selectedTask) && !signedIn">
+							<div class="row" ng-show="!signedIn">
 								<div class="col-md-12"> 
-									<button class="btn btn-danger btn-sm">Must be logged in</button>
+									<p>Only Logged in users can comment on this task</p>
 								</div>
 							</div>
 						</div>
