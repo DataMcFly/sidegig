@@ -7,13 +7,20 @@ angular.module('OtherCtrl', ['ngRoute'])
 	$scope.token = null;
 
 	var login = new Login();
-	if( login.isLoggedIn() ){
-		$scope.token = login._getToken();
-		User.query({"_id":$scope.token},{"limit":1}).then(function( user ){
-			$scope.currentUser = user[0];
-			$scope.currentUser.gravatar = 'https://secure.gravatar.com/avatar/' + md5($scope.currentUser.email) + '.jpg?s=30&d=wavatar';
-		});
+	function update() {
+		$timeout(function () {
+			if( login.isLoggedIn() ){
+				$scope.token = login._getToken();
+				User.query({"_id":$scope.token},{"limit":1}).then(function( user ){
+					$scope.currentUser = user[0];
+					$scope.currentUser.gravatar = 'https://secure.gravatar.com/avatar/' + md5($scope.currentUser.email) + '.jpg?s=30&d=wavatar';
+				});
+			}
+		}, 0);
 	}
+	update();
+	login.watch(update, $scope);
+	
 })
 .controller('TaskController', function($scope, $location, toaster, Task, Usertask, Login, User) {
 	$scope.currentUser = {};
