@@ -7,11 +7,7 @@ Users name the task they need done, name the price they are willing to pay, and 
 
 Built with the FIT stack, client-side only.
 
-<p style="border: 1px solid #ccc">
-
-![Clone TaskRabbit with Angular.js and Flybase](/sidegig.png?raw=true "Clone TaskRabbit with Angular.js and Flybase")
-
-</p>
+![Clone TaskRabbit with Angular.js and Flybase](https://raw.githubusercontent.com/DataMcFly/sidegig/master/sidegig.png?token=AABT7KAqtHCsUEJTn0yZ4O_HForlU0Diks5VpfacwA%3D%3D "Clone TaskRabbit with Angular.js and Flybase")
 
 With SideGig, you will be learning how to use AngularJS & Flybase to build a Real-time web app.  More importantly, we're build a Real platform which is a clone of TaskRabbit.
 
