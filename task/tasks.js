@@ -258,13 +258,12 @@ angular.module('TaskCtrl', ['ngRoute', 'flybaseResourceHttp', 'loginMcFly'])
 		Task.query({"_id":taskId},{"limit":1}).then(function( task ){
 			task = task[0];
 			task.$remove(function() {
-				$location.path('/dashboard');
+				$location.path('/browse/');
 			}, function() {
-				throw new Error('Sth went wrong...');
+				$location.path('/browse/');
 			});
-		});			
+		});
 	};
-
 })
 .config(['$routeProvider','$locationProvider', function ($routeProvider,$locationProvider) {
 	$routeProvider.when('/dashboard', {
