@@ -3,7 +3,9 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>SideGig.me</title>
+        <title ng-if="!$state">SideGig.Me - Loading...</title>
+        <title ng-if="$state">SideGig.Me - {{$state.current.title}}</title>
+
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<base ng-href="/">
 	
