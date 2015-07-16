@@ -47,7 +47,7 @@
 					<span>
 						<span gravatar name="{{selectedTask.name}}" width="50" class="img-circle gravatar" user-id="{{selectedTask.poster}}"></span>
 						Posted by {{selectedTask.name}} -
-						<span am-time-ago="selectedTask.datetime"></span>&nbsp;
+						<span am-time-ago="selectedTask.datetime" am-preprocess="unix"></span>&nbsp;
 						<span class="label status {{selectedTask.status}}">{{ selectedTask.status }}</span>
 					</span>								
 				</div>
