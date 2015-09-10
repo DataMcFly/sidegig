@@ -55,10 +55,5 @@ With SideGig, you will be learning how to use AngularJS & Flybase to build a Rea
 * Setting up Mandrill & Zapier
 * Setting up Zapier for Notification action
 
-#### Task 9: Security on Flybase
-* Let's hack  SideGig by using cURL
-* Building Flybase security rules
-* Apply and Test
-
-#### Task 10: Deploying & Hosting
+#### Task 9: Deploying & Hosting
 * Deploying & hosting on Github Pages for FREE
