@@ -88,12 +88,14 @@ angular.module('OtherCtrl', ['ngRoute'])
 	if( login.isLoggedIn() ){
 		$scope.token = login._getToken();
 		User.query({"_id":$scope.token},{"limit":1}).then(function( user ){
+console.log( user );
 			$scope.user = user[0];
 			$scope.email = $scope.user.email;
 		});
 	};
 
 	$scope.changePassword = function(oldPass, newPass) {
+console.log( $scope.user.password );
 		if( $scope.user.password == oldPass ){
 			$scope.user.password = newPass;
 			delete $scope.user.oldPass;
@@ -102,7 +104,7 @@ angular.module('OtherCtrl', ['ngRoute'])
 				toaster.pop('success', "Password changed successfully");
 			});
 		}else{
-			errMessage(err); 
+			errMessage("INVALID_PASSWORD"); 
 		}
 	};
 		
